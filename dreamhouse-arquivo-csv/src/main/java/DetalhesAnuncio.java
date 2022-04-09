@@ -31,9 +31,19 @@ public class DetalhesAnuncio {
 
     @Override
     public String toString() {
-        return String.format("%06d %8b %10b %11b %9.2f %13.2f %19.2f %18d %18d %20b %13b\n",
-                id, ativoDiaria, ativoSemanal, ativoMensal, valorDiaria, valorSemanal,
-                valorMensal, qtdDormitorios, qtdToaletes, garagem, mobiliada);
+        return "DetalhesAnuncio{" +
+                "id=" + id +
+                ", ativoDiaria=" + ativoDiaria +
+                ", ativoSemanal=" + ativoSemanal +
+                ", ativoMensal=" + ativoMensal +
+                ", valorDiaria=" + valorDiaria +
+                ", valorSemanal=" + valorSemanal +
+                ", valorMensal=" + valorMensal +
+                ", qtdDormitorios=" + qtdDormitorios +
+                ", qtdToaletes=" + qtdToaletes +
+                ", garagem=" + garagem +
+                ", mobiliada=" + mobiliada +
+                '}';
     }
 
     public Integer getId() {

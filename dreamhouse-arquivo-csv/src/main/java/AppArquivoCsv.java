@@ -70,8 +70,8 @@ public class AppArquivoCsv {
 
         try {
 
-            System.out.printf("%-6s %-12s %-20s %-7s %8s %19s %19s %25s %20s %10s\n",
-                    "ID", "PUBLICAÇÃO", "DESCRIÇÃO", "INICIO", "FIM",
+            System.out.printf("%-6s %-20s %10s %18s %18s %14s %18s %23s %10s %8s\n",
+                    "ID", "DESCRIÇÃO", "PUBLICAÇÃO", "INICIO ALUGUEL", "FIM ALUGUEL",
                     "CIDADE", "BAIRRO", "LOGRADOURO", "NUMERO", "NOTA");
 
             while (entrada.hasNext()) {
@@ -86,8 +86,8 @@ public class AppArquivoCsv {
                 String numero = entrada.next();
                 String nota = entrada.next();
 
-                System.out.printf("%06d %-12s %-20s %7s %12s %15s %22s %25s %11s %13s\n",
-                        id,dtPublicacao,descricao,dtInicio,dtFim,cidade, bairro, logradouro, numero, nota);
+                System.out.printf("%06d %-20s %7s %18s %18s %14s %18s %23s %10s %8s\n",
+                        id,descricao,dtPublicacao,dtInicio,dtFim,cidade, bairro, logradouro, numero, nota);
             }
         }
         catch (NoSuchElementException erro) {
@@ -119,7 +119,7 @@ public class AppArquivoCsv {
 
         Anuncio casa = new Anuncio(1, "03/04/2022", "Casa boa", "04/04/2022",
                 "11/04/2022", "São Paulo", "Vila Mariana", "Rua Afonso Celso",
-                "235", "****");
+                "235", "*****");
 
 
         anuncio.adiciona(casa);

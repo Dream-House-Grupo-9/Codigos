@@ -31,10 +31,18 @@ public class Anuncio {
 
     @Override
     public String toString() {
-
-        return String.format("%06d %-12s %-20s %7s %12s %15s %22s %25s %11s %13s\n",
-                id, dtPublicacao, descricao, inicioDisponibilidade, fimDisponibilidade,
-                cidade, bairro, logradouro, numero, notaAnuncio);
+        return "Anuncio{" +
+                "id=" + id +
+                ", dtPublicacao='" + dtPublicacao + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", inicioDisponibilidade='" + inicioDisponibilidade + '\'' +
+                ", fimDisponibilidade='" + fimDisponibilidade + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", logradouro='" + logradouro + '\'' +
+                ", numero='" + numero + '\'' +
+                ", notaAnuncio='" + notaAnuncio + '\'' +
+                '}';
     }
 
     public Integer getId() {

@@ -90,7 +90,7 @@ public class AppArquivoDetalhesCsv {
                     boolean garagem = entrada.nextBoolean();
                     boolean mobiliada = entrada.nextBoolean();
 
-                    System.out.printf("%06d %8b %10b %11b %9.2f %13.2f %19.2f %18d %18d %20b %13b\n",
+                    System.out.printf("%06d %10b %10b %10b %14.2f %16.2f %18.2f %20d %15d %15b %15b\n",
                             id,diaria,semanal,mensal,valorDiaria,valorSemanal, valorMensal,
                             dormitorios, toaletes, garagem, mobiliada);
                 }

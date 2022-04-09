@@ -91,7 +91,8 @@ public class AppArquivoDetalhesCsv {
                     boolean mobiliada = entrada.nextBoolean();
 
                     System.out.printf("%06d %8b %10b %11b %9.2f %13.2f %19.2f %18d %18d %20b %13b\n",
-                            id,diaria,semanal,mensal,valorDiaria,valorSemanal, valorMensal, dormitorios, toaletes, garagem, mobiliada);
+                            id,diaria,semanal,mensal,valorDiaria,valorSemanal, valorMensal,
+                            dormitorios, toaletes, garagem, mobiliada);
                 }
             }
             catch (NoSuchElementException erro) {
@@ -121,8 +122,11 @@ public class AppArquivoDetalhesCsv {
         public static void main(String[] args) {
         ListaObj <DetalhesAnuncio> detalhesAnuncio = new ListaObj<>(5);
 
-        DetalhesAnuncio detalhes = new DetalhesAnuncio(1, true, false, false,
-                250.0, 0.0, 0.0, 2, 2, false, false);
+        DetalhesAnuncio detalhes = new DetalhesAnuncio(
+                1, true, false, false,
+                250.0, 0.0, 0.0, 2,
+                2, false, false
+        );
 
         detalhesAnuncio.adiciona(detalhes);
 

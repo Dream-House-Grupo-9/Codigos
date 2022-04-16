@@ -70,7 +70,7 @@ public class AppArquivoCsv {
 
         try {
 
-            System.out.printf("%-6s %-20s %10s %18s %18s %14s %18s %23s %10s %8s\n",
+            System.out.printf("%-6s %-20s %-10s %-18s %-18s %-14s %-18s %-23s %-10s %-8s\n",
                     "ID", "DESCRIÇÃO", "PUBLICAÇÃO", "INICIO ALUGUEL", "FIM ALUGUEL",
                     "CIDADE", "BAIRRO", "LOGRADOURO", "NUMERO", "NOTA");
 
@@ -86,7 +86,7 @@ public class AppArquivoCsv {
                 String numero = entrada.next();
                 String nota = entrada.next();
 
-                System.out.printf("%06d %-20s %7s %18s %18s %14s %18s %23s %10s %8s\n",
+                System.out.printf("%06d %-20s %-10s %-18s %-18s %-14s %-18s %-23s %-10s %-8s\n",
                         id,descricao,dtPublicacao,dtInicio,dtFim,cidade, bairro, logradouro, numero, nota);
             }
         }

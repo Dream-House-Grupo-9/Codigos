@@ -27,10 +27,10 @@ public class AppArquivoCsv {
         try {
             for (int i = 0; i < lista.getTamanho(); i++) {
                 Anuncio anuncio = lista.getElemento(i);
-                saida.format("%d;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", anuncio.getId(),anuncio.getDtPublicacao(),
+                saida.format("%d;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", anuncio.getId(),anuncio.getDtPublicacao(),
                         anuncio.getDescricao(), anuncio.getInicioDisponibilidade(), anuncio.getFimDisponibilidade(),
                         anuncio.getCidade(), anuncio.getBairro(), anuncio.getLogradouro(),
-                        anuncio.getNumero(), anuncio.getNotaAnuncio());
+                        anuncio.getNumero(), anuncio.getNotaAnuncio(), anuncio.getTipoImovel());
             }
         }
         catch (FormatterClosedException erro) {
@@ -70,9 +70,9 @@ public class AppArquivoCsv {
 
         try {
 
-            System.out.printf("%-6s %-20s %-10s %-18s %-18s %-14s %-18s %-23s %-10s %-8s\n",
+            System.out.printf("%-6s %-20s %-10s %-18s %-18s %-14s %-18s %-23s %-10s %-8s %-14s\n",
                     "ID", "DESCRIÇÃO", "PUBLICAÇÃO", "INICIO ALUGUEL", "FIM ALUGUEL",
-                    "CIDADE", "BAIRRO", "LOGRADOURO", "NUMERO", "NOTA");
+                    "CIDADE", "BAIRRO", "LOGRADOURO", "NUMERO", "NOTA", "TIPO");
 
             while (entrada.hasNext()) {
                 Integer id = entrada.nextInt();
@@ -85,9 +85,10 @@ public class AppArquivoCsv {
                 String logradouro = entrada.next();
                 String numero = entrada.next();
                 String nota = entrada.next();
+                String tipoImovel = entrada.next();
 
-                System.out.printf("%06d %-20s %-10s %-18s %-18s %-14s %-18s %-23s %-10s %-8s\n",
-                        id,descricao,dtPublicacao,dtInicio,dtFim,cidade, bairro, logradouro, numero, nota);
+                System.out.printf("%06d %-20s %-10s %-18s %-18s %-14s %-18s %-23s %-10s %-8s %-14s\n",
+                        id,descricao,dtPublicacao,dtInicio,dtFim,cidade, bairro, logradouro, numero, nota, tipoImovel);
             }
         }
         catch (NoSuchElementException erro) {
@@ -119,7 +120,7 @@ public class AppArquivoCsv {
 
         Anuncio casa = new Anuncio(1, "03/04/2022", "Casa boa", "04/04/2022",
                 "11/04/2022", "São Paulo", "Vila Mariana", "Rua Afonso Celso",
-                "235", "*****");
+                "235", "*****", "casa");
 
 
         anuncio.adiciona(casa);

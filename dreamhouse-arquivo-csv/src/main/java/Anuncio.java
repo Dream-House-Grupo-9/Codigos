@@ -12,10 +12,11 @@ public class Anuncio {
     private String logradouro;
     private String numero;
     private String notaAnuncio;
+    private String tipoImovel;
 
     public Anuncio(Integer id, String dtPublicacao, String descricao, String inicioDisponibilidade,
                    String fimDisponibilidade, String cidade, String bairro, String logradouro,
-                   String numero, String notaAnuncio)
+                   String numero, String notaAnuncio, String tipoImovel)
     {
         this.id = id;
         this.dtPublicacao = dtPublicacao;
@@ -27,6 +28,7 @@ public class Anuncio {
         this.logradouro = logradouro;
         this.numero = numero;
         this.notaAnuncio = notaAnuncio;
+        this.tipoImovel = tipoImovel;
     }
 
     @Override
@@ -42,6 +44,7 @@ public class Anuncio {
                 ", logradouro='" + logradouro + '\'' +
                 ", numero='" + numero + '\'' +
                 ", notaAnuncio='" + notaAnuncio + '\'' +
+                ", tipoImovel='" + tipoImovel + '\'' +
                 '}';
     }
 
@@ -123,5 +126,13 @@ public class Anuncio {
 
     public void setNotaAnuncio(String notaAnuncio) {
         this.notaAnuncio = notaAnuncio;
+    }
+
+    public String getTipoImovel() {
+        return tipoImovel;
+    }
+
+    public void setTipoImovel(String tipoImovel) {
+        this.tipoImovel = tipoImovel;
     }
 }
